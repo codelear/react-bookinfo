@@ -4,3 +4,5 @@ this project is a simple book info app. it lists the books of the subject humor 
 clicking on a book will provide the description of the book.
 
 this project uses axios to fetch data from the openlibrary. it also implements infinity scrolling using Observer and Ref.
+
+![screenshot](https://github.com/codelear/react-bookinfo/blob/main/screenshot-bookinfo.png)
