@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-function BookInfo(work) {
+function useBookInfo(work) {
   const [isloading, setisloading] = useState(false);
   const [bookinfo, setbookinfo] = useState();
 
@@ -42,5 +42,5 @@ function BookInfo(work) {
   return { bookinfo, isloading };
 }
 
-export default BookInfo;
+export default useBookInfo;
 
