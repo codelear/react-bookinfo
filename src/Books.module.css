@@ -1,0 +1,32 @@
+.front
+{
+    width:fit-content;
+    height:fit-content;
+    background: #f7f4cc;
+    position:fixed;
+    opacity: 90%;
+    top: 0;
+}
+
+.centerscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+.expanding
+{
+    animation: grow 1500ms ease-in-out;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      } 
+}
