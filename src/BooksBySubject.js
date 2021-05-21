@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-function BooksBySubject(subject, pagenumber) {
+function useBooksBySubject(subject, pagenumber) {
   const [isloading, setisloading] = useState(false);
   const [bookslist, setbookslist] = useState([]);
   const [hasmorebooks, sethasmorebooks] = useState(false);
@@ -52,5 +52,5 @@ function BooksBySubject(subject, pagenumber) {
   return { bookslist, hasmorebooks, isloading };
 }
 
-export default BooksBySubject;
+export default useBooksBySubject;
 
