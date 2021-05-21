@@ -1,14 +1,14 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef } from "react";
 import { Container } from "react-bootstrap";
-import BooksBySubject from "./BooksBySubject";
-import BookInfo from "./BookInfo";
+import useBooksBySubject from "./BooksBySubject";
+import useBookInfo from "./BookInfo";
 import modules from "./Books.module.css";
 import BookDetails from "./BookDetails";
 
 function Books(props) {
   const [pagenumber, setpagenumber] = useState(0);
 
-  let { bookslist, hasmorebooks, isloading } = BooksBySubject(
+  let { bookslist, hasmorebooks, isloading } = useBooksBySubject(
     props.subject,
     pagenumber
   );
@@ -16,7 +16,7 @@ function Books(props) {
   const [work, setwork] = useState("");
   const [showinfo, setshowinfo] = useState(false);
 
-  let { bookinfo, isinfoloading } = BookInfo(work);
+  let { bookinfo, isinfoloading } = useBookInfo(work);
 
   function getInfo(book) {
     setwork(book.key);
